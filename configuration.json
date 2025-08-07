@@ -1,0 +1,36 @@
+{
+	"packages":
+	[
+		"make",
+		"g++",
+		"vim"
+	],
+	
+	"repositories":
+	[
+		{
+			"URL": "https://github.com/akashington/vim-dotfiles",
+			"directory": "/home/development/vim-dotfiles"
+		},
+        {
+            "URL": "https://github.com/akashington/workspace",
+            "directory": "/home/development/workspace"
+        },
+        {
+            "URL": "https://github.com/akashington/development-workspace",
+			"directory": "/home/development/development-workspace"
+        },
+		{
+			"URL": "https://github.com/akashington/velkro",
+			"directory": "/home/development/velkro"
+		}
+	],
+
+	"post-build-commands":
+	[
+		"ln -sf /home/development/vim-dotfiles/.vimrc /home/development/.vimrc",
+		"ln -sf /home/development/vim-dotfiles/.vim /home/development/.vim"
+	],
+
+	"startup-command": "bash -c 'vim; exec bash'"
+}

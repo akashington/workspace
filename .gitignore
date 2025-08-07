@@ -1,0 +1,11 @@
+*
+
+!.github/
+!.github/workflows/
+!.github/workflows/docker-build-release.yml
+
+!.gitignore
+!configuration.json
+!Dockerfile
+!LICENSE
+!README.md
