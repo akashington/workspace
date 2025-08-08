@@ -12,6 +12,7 @@ The `configuration.json` file contains all the configurations passed on to docke
 {
 	"packages":
 	[
+		"locales",
 		"make",
 		"g++",
 		"vim"
@@ -24,6 +25,14 @@ The `configuration.json` file contains all the configurations passed on to docke
 			"directory": "/home/development/vim-dotfiles"
 		},
 		{
+			"URL": "https://github.com/akashington/workspace",
+			"directory": "/home/development/workspace"
+		},
+		{
+			"URL": "https://github.com/akashington/development-workspace",
+			"directory": "/home/development/development-workspace"
+		},
+		{
 			"URL": "https://github.com/akashington/velkro",
 			"directory": "/home/development/velkro"
 		}
@@ -32,10 +41,12 @@ The `configuration.json` file contains all the configurations passed on to docke
 	"post-build-commands":
 	[
 		"ln -sf /home/development/vim-dotfiles/.vimrc /home/development/.vimrc",
-		"ln -sf /home/development/vim-dotfiles/.vim /home/development/.vim"
+		"ln -sf /home/development/vim-dotfiles/.vim /home/development/.vim",
+		"sudo locale-gen en_US.UTF-8",
+		"sudo update-locale LANG=en_US.UTF-8"
 	],
 
-	"startup-command": "bash -c 'vim; exec bash'"
+	"startup-command": "env LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8 bash -c 'vim; exec bash'"
 }
 ```
 
