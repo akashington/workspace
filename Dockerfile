@@ -46,6 +46,9 @@ RUN bash -eux <<'EOF'
 	done
 EOF
 
+# Fix ownership of all files under /home/development
+RUN chown -R development:development /home/development
+
 # Run user-specified post-build commands
 RUN bash -eux <<'EOF'
 	if jq -e '."post-build-commands"' "$CONFIG_FILE" >/dev/null; then
