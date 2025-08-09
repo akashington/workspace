@@ -1,0 +1,23 @@
+{
+	"name": "Development Workspace",
+	"image": "akashington/workspace:latest",
+    "workspaceFolder": "/home/development/workspace",
+	
+	"customizations":
+	{
+		"vscode":
+		{
+			"extensions":
+			[
+				"ms-vscode.cpptools",
+				"ms-vscode.gitlens"
+			],
+			"settings":
+			{
+				"terminal.integrated.defaultProfile.linux": "bash"
+			}
+		}
+	},
+	
+	"remoteUser": "development"
+}

@@ -1,5 +1,8 @@
 *
 
+!.devcontainer/
+!.devcontainer/devcontainer.json
+
 !.github/
 !.github/workflows/
 !.github/workflows/docker-build-release.yml
